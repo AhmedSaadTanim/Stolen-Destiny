@@ -270,9 +270,12 @@ GameObject:
   - component: {fileID: 243932426}
   - component: {fileID: 243932425}
   - component: {fileID: 243932424}
+  - component: {fileID: 243932430}
+  - component: {fileID: 243932429}
+  - component: {fileID: 243932428}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -416,6 +419,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &243932428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243932423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842f4c76a6bdd554793de0ae03fda9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
+  animator: {fileID: 0}
+  isAnimationComplete: 0
+--- !u!114 &243932429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243932423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0bcf342fe8fcd42a91478e005b6546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  dust: {fileID: 0}
+  moveSpeed: 15
+  jumpForce: 7
+  dashSpeed: 10
+  dashDuration: 3
+  dashCooldown: 5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  extraHeight: -0.05
+--- !u!114 &243932430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243932423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f395eff7e861004b8eaba7785c792cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  movement: {fileID: 243932429}
+  animation: {fileID: 243932428}
 --- !u!1 &307785215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,9 +1224,9 @@ GameObject:
   - component: {fileID: 1817892039}
   - component: {fileID: 1817892038}
   - component: {fileID: 1817892037}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2011,7 +2064,7 @@ Tilemap:
     m_Data: {fileID: 948594960149697963, guid: 0b0ba242c6354d744b4524eb0fc98ee7, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 72
+    m_RefCount: 64
     m_Data:
       e00: 1
       e01: 0

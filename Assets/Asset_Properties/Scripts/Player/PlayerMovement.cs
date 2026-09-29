@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float dashCooldown;
     [SerializeField] LayerMask groundLayer;
     
+    [Header("Debug Variables")]
+    [SerializeField] float extraHeight = 0.1f;
     #endregion
 
     #region Properties
@@ -73,12 +75,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        PerformGroundCheck();
+        
         if (player.IsPlayerMovementEnabled)
         {
             PerformMovement();
         }
     }
 
+    private void PerformGroundCheck()
+    {
+        bool groundedNow = IsGrounded();
+
+        if (groundedNow && !isGrounded)
+        {
+            canJump = true;
+            doubleJump = true;
+            canDash = true;
+            hasAirDashed = false;
+        }
+
+        isGrounded = groundedNow;
+    }
+    
     #region Player Movement Functions
 
     private void PerformMovement()
@@ -137,9 +156,8 @@ public class PlayerMovement : MonoBehaviour
 
     bool IsGrounded() 
     {
-        float extraHeight = 0.1f;
         Vector2 rayOrigin = new Vector2(Player.playerCollider.bounds.center.x, Player.playerCollider.bounds.min.y - 0.05f);
-        float rayLength = Player.playerCollider.bounds.extents.y + extraHeight;
+        float rayLength = extraHeight;
 
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, groundLayer);
 
@@ -148,8 +166,6 @@ public class PlayerMovement : MonoBehaviour
 
         return hit.collider != null;
     }
-
-
     
     #endregion
 
@@ -216,7 +232,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void CreateDust(bool shouldPlay)
     {
-        if (shouldPlay)
+        if (shouldPlay && dust != null)
         {
             dust.Play();
         }
@@ -238,32 +254,4 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #endregion
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground") && IsGrounded())
-        {
-            hasAirDashed = true; // Reset air dash on landing
-            canDash = true;
-            canJump = true;
-            doubleJump = true;
-            isGrounded = true;
-        }
-        else if (other.gameObject.CompareTag("Wall"))
-        {
-            canJump = true;
-            doubleJump = false;
-            isGrounded = false;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            canDash = false;
-            hasAirDashed = false;
-            isGrounded = false;
-        }
-    }
 }
