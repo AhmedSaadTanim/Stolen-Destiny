@@ -12,9 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="85b8d60f-1666-4514-94e3-65ba980bde82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Stolen Destiny/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stolen Destiny/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset_Properties/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset_Properties/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset_Properties/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset_Properties/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset_Properties/Prefabs/Rooms/Room.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset_Properties/Prefabs/Rooms/Room.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset_Properties/Scenes/Levels.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset_Properties/Scenes/Levels.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +39,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Asset_Properties/Scripts/LevelEditor/RoomBound.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1,
