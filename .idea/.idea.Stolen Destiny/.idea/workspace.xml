@@ -11,9 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85b8d60f-1666-4514-94e3-65ba980bde82" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stolen Destiny/.idea/indexLayout.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Stolen Destiny/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stolen Destiny/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset_Properties/Prefabs/Rooms/Room.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset_Properties/Prefabs/Rooms/Room.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset_Properties/Scenes/Levels.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset_Properties/Scenes/Levels.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
